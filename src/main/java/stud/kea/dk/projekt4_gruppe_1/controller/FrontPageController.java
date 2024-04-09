@@ -1,4 +1,4 @@
-package stud.kea.dk.projekt4_gruppe_1.controller;
+package stud.kea.dk.projekt4_gruppe_1.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

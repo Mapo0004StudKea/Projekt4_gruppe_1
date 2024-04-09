@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    background-color: black;
+    color: ghostwhite;
+    padding: 20px;
+    flex-direction: row;
+}
+.blockLogo{
+    text-align: left;
+}
+
+.blockList{
+    text-align: center;
+}

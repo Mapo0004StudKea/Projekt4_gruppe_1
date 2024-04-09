@@ -3,12 +3,20 @@
     background-color: black;
     color: ghostwhite;
     padding: 20px;
-    flex-direction: row;
+    justify-content: space-evenly;
 }
+
 .blockLogo{
     text-align: left;
+    border: 1px solid snow;
+    width: 10%;
 }
 
 .blockList{
     text-align: center;
+    border: 1px solid snow;
+}
+
+.blockLogin{
+    border: 1px solid snow;
 }

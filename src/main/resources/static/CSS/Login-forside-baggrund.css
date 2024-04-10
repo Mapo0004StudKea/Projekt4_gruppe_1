@@ -9,27 +9,32 @@
 
 .block1 {
     display: flex;
-    background-color: rgba(240, 240, 240, 0.8);
-    padding: 10%;
-    border: 1px solid #ccc;
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid #1A1A1A;
     border-radius: 5px;
-    margin: 5%;
+    width: 20%;
+    height: 60%;
     flex-direction: column;
+    margin: 10%;
 }
+
 .block2{
     display: flex;
-    flex-direction: row;
-    margin: 30%;
+    margin: 15%;
+    h1{
+        color: #FFC601;
+    }
+    flex-direction: column;
+    justify-content: center;
 }
 .block3{
     display: flex;
-    flex-direction: row;
-    margin: 10%;
+    margin: 5%;
 }
 .block4{
     display: flex;
-    flex-direction: row;
-    margin: 10%;
+    margin: 5%;
+   justify-content: center;
 }
 
 .button {
@@ -43,5 +48,5 @@
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: wheat;
 }

@@ -1,14 +1,14 @@
 .header {
     display: flex;
-    background-color: black;
-    color: ghostwhite;
+    background-color: #25252B;
+    color: #FF8C00;
     padding: 20px;
     justify-content: space-evenly;
 }
 
 .blockLogo{
     text-align: left;
-    border: 1px solid snow;
+
     width: 10%;
 }
 

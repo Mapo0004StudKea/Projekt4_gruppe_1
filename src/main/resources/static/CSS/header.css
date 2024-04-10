@@ -1,7 +1,7 @@
 .header {
     display: flex;
-    background-color: #25252B;
-    color: #FF8C00;
+    background-color: #2E2E2E;
+    color: #FFC601;
     padding: 20px;
     justify-content: space-evenly;
 }
@@ -14,9 +14,9 @@
 
 .blockList{
     text-align: center;
-    border: 1px solid snow;
+
 }
 
 .blockLogin{
-    border: 1px solid snow;
+    
 }

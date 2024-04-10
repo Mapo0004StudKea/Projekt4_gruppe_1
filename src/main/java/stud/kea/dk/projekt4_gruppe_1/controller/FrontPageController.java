@@ -4,8 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import stud.kea.dk.projekt4_gruppe_1.Model.User;
-import stud.kea.dk.projekt4_gruppe_1.Repository.UserRepository;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -28,12 +26,12 @@ public class FrontPageController {
         return "Frontpage";
     }
 
-    @GetMapping("/createUser")
+    @GetMapping("/createAccount")
     public String visCreate() {
-        return "createUser";
+        return "createAccount";
     }
 
-    @PostMapping("/createUser")
+    @PostMapping("/createAccount")
     public String createUser(
             @RequestParam("name") String name,
             @RequestParam("lastName") String lastName,
@@ -44,7 +42,7 @@ public class FrontPageController {
         if (dateOfBirth == null || dateOfBirth.isEmpty()) {
             // Handle the case where the date of birth is empty
             // You may redirect the user back to the registration page with an error message
-            return "redirect:/createUser"; // Redirect to the registration page
+            return "redirect:/createAccount"; // Redirect to the registration page
         }
 
         try {
@@ -56,7 +54,7 @@ public class FrontPageController {
         } catch (DateTimeParseException e) {
             // Handle the case where the date format is invalid
             // You may redirect the user back to the registration page with an error message
-            return "redirect:/createUser"; // Redirect to the registration page
+            return "redirect:/createAccount"; // Redirect to the registration page
         }
 
         return "redirect:/FrontPage";

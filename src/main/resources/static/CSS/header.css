@@ -1,27 +1,40 @@
-.header {
-    display: flex;
-    background-color: #1A1A1A;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
     color: #FFC601;
-    padding: 20px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.image {
+    background-image: url(../image/guitar.png);
+    background-size: cover;
+    background-position: left top;
+    width: 60px;
+    height: 60px;
+}
+.Forside{
+    font-size: 30px;
+
+
+}
+.navbar{
+    font-size:18px;
+    display: flex;
     justify-content: space-evenly;
-}
-
-.blockLogo{
-    text-align: left;
-    width: 10%;
-}
-
-.blockKoncert{
-
-}
-.blockInspiration{
-
-}
-.blockList{
-    text-align: center;
+    align-items: center;
 
 }
 
-.blockLogin{
-    
-}
+

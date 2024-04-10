@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel = "stylesheet" href="../Static/css/header.css" th:href ="@{css/header.css}">
-<link rel = "stylesheet" href="../Static/css/body.css" th:href ="@{css/body.css}">
-<link rel = "stylesheet" href="../Static/css/frontpage.background.css" th:href ="@{css/frontpage.background.css}">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <title>Hvad ønsker DU!</title>
+    <link rel = "stylesheet" href="../Static/css/header.css" th:href ="@{css/header.css}">
+    <link rel = "stylesheet" href="../Static/css/body.css" th:href ="@{css/body.css}">
+    <link rel = "stylesheet" href="../Static/css/frontpage.background.css" th:href ="@{css/frontpage.background.css}">
 </head>
 <body>
- <div class="header">
-     <div class="blockLogo">
-     <p1>logo</p1>
-     </div>
-     <div class="blockKoncert">
-         <p1>Koncerter</p1>
-     </div>
-     <div class="blockInspiration">
-         <p1>Inspiration</p1>
-     </div>
-     <div class="blockList">
-     <p1>Ønskeliste</p1>
-     </div>
-     <div class="blockLogin">
-     <p1>login</p1>
-     </div>
- </div>
+ <header class="header">
+
+     <a href="/" class="image"></a>
+
+     <a href="/" class="Forside"><p1>KoncertKavaranen</p1></a>
+
+     <nav class="navbar">
+         <a href="/">Koncerter</a>
+         <a href="/">Inspiration</a>
+         <a href="/">Ønskeliste</a>
+         <a href="/">Login</a>
+
+     </nav>
+
+ </header>
 
 <div class="frontpage-background">
 <h1>Hello</h1>

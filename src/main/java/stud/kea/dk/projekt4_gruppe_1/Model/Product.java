@@ -2,31 +2,29 @@ package stud.kea.dk.projekt4_gruppe_1.Model;
 
 public class Product {
     int id;
-    int rank;
-    String name;
-    String category;
-    String description;
+    String productName;
+    String productDescription;
     double price;
+    int quantity;
 
     public Product() {
     }
 
-    public Product(int rank, String name, String category, String description, double price) {
-        this.rank = rank;
-        this.name = name;
-        this.category = category;
-        this.description = description;
+    public Product(int id, String productName, String productDescription, double price, int quantity) {
+        this.id = id;
+        this.productName = productName;
+        this.productDescription = productDescription;
         this.price = price;
+        this.quantity = quantity;
     }
 
-    public Product(int id, int rank, String name, String category, String description, double price) {
-        this.id = id;
-        this.rank = rank;
-        this.name = name;
-        this.category = category;
-        this.description = description;
+    public Product(String productName, String productDescription, double price, int quantity) {
+        this.productName = productName;
+        this.productDescription = productDescription;
         this.price = price;
+        this.quantity = quantity;
     }
+
 
     public int getId() {
         return id;
@@ -36,36 +34,20 @@ public class Product {
         this.id = id;
     }
 
-    public int getRank() {
-        return rank;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setRank(int rank) {
-        this.rank = rank;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public String getName() {
-        return name;
+    public String getProductDescription() {
+        return productDescription;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
     }
 
     public double getPrice() {
@@ -75,4 +57,13 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }
+

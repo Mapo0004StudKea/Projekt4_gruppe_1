@@ -22,6 +22,7 @@ public class wishListController {
     public String wishListSide(Model model){
         List<WishList> wishLists = wishListRepository.getWishList();
         model.addAttribute("wishlist", wishLists);
+        System.out.println(wishLists);
         return "wishListSide";
     }
 

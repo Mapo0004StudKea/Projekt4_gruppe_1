@@ -18,4 +18,8 @@ public class wishListController {
         return "makeWishList";
     }
 
+    @PostMapping("/MakeWishList")
+    public String newWishList(){
+        return "wishListSide";
+    }
 }

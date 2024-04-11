@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class wishListController {
 
 
-    @GetMapping("wishListSide")
+    @GetMapping("/wishListSide")
     public String wishListSide(){
-        return "wishListList";
+        return "wishListSide";
     }
 
-    @PostMapping("/MakeWishList")
+    @GetMapping("/MakeWishList")
     public String makeWishList(){
         return "makeWishList";
     }

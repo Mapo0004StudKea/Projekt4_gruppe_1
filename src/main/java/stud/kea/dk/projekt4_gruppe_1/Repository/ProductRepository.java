@@ -21,7 +21,21 @@ public class ProductRepository {
         public void createProduct(Product product) {
             final String INSERT_PRODUCT_SQL = "INSERT INTO product (productname, productdescription, price, quantity) VALUES (?,?,?,?)";
             jdbcTemplate.update(INSERT_PRODUCT_SQL, product.getProductName(), product.getProductDescription(), product.getPrice(), product.getQuantity());
+    }
 
+    public Product getProductListbyId(int id) {
+            String get_PRODUCT_SQL = "SELECT * FROM product WHERE id =?";
+            return jdbcTemplate.queryForObject(get_PRODUCT_SQL,new Object[]{id}, new BeanPropertyRowMapper<>(Product.class));
+    }
+
+    public void deleteProductById(int id) {
+            String DELETE_PRODUCTLIST_SQL = "DELETE FROM product WHERE id = ?";
+            jdbcTemplate.update(DELETE_PRODUCTLIST_SQL, id);
+    }
+
+    public void updateProducts(Product product) {
+            String UPDATE_PRODUCT_SQL = "UPDATE product SET productname WHERE id =?";
+            jdbcTemplate.update(UPDATE_PRODUCT_SQL, product.getProductName(), product.getId());
     }
 
 }

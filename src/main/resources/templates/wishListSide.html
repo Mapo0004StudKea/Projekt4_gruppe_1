@@ -14,18 +14,17 @@
         <a href="" class="blockWish">
             <div>
                 <table>
-                    <tr>
-                        <th>Navn på Ønskelisten</th>
-                    </tr>
+                    <thead>
+                         <tr>
+                            <th>Navn på Ønskelisten</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="wishlist : ${wishlist}">
+                            <td th:text="${wishlist.wishListName}"></td>
+                        </tr>
+                    </tbody>
                 </table>
-                <tbody>
-                    <tr th:eche="wishlist ${wishlist} ">
-                        <td th:text="${wishlist.wi}"></td>
-
-                    </tr>
-
-                </tbody>
-
             </div>
         </a>
 

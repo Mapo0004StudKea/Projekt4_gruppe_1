@@ -4,7 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import stud.kea.dk.projekt4_gruppe_1.Model.WishList;
 import stud.kea.dk.projekt4_gruppe_1.Repository.WishListRepository;
+
+
 
 @Controller
 public class wishListController {
@@ -23,7 +27,9 @@ public class wishListController {
     }
 
     @PostMapping("/MakeWishList")
-    public String newWishList(){
+    public String newWishList(@RequestParam("wishListName") String name){
+        WishList wishList = new WishList(name);
+        wishListRepository.createWishlist(wishList);
         return "wishListSide";
     }
 }

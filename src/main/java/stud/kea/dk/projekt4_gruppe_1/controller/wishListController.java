@@ -21,12 +21,12 @@ public class wishListController {
         return "wishListSide";
     }
 
-    @GetMapping("/MakeWishList")
+    @GetMapping("/makeWishList")
     public String makeWishList(){
         return "makeWishList";
     }
 
-    @PostMapping("/MakeWishList")
+    @PostMapping("/makeWishList")
     public String newWishList(@RequestParam("wishListName") String name){
         WishList wishList = new WishList(name);
         wishListRepository.createWishlist(wishList);

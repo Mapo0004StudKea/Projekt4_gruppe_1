@@ -30,11 +30,12 @@
 .block3{
     display: flex;
     margin: 5%;
+    justify-content: center;
 }
 .block4{
     display: flex;
     margin: 5%;
-   justify-content: center;
+    justify-content: center;
 }
 
 .button {

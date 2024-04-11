@@ -1,0 +1,12 @@
+
+
+.blockWish{
+    display: flex;
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid #1A1A1A;
+    border-radius: 5px;
+    width: 20%;
+    height: 60%;
+    flex-direction: column;
+    margin: 10%;
+}

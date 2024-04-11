@@ -6,25 +6,40 @@
     <title>Dine ønskelister</title>
 </head>
 <body>
-    <div class="blockCointere">
-        <a href="makeWishList" class = "blockWish">
-            <div>hvis man trykker her kommer man over til makeWishList</div>
-        </a>
+<div class="blockCointere">
+    <a href="makeWishList" class = "blockWish">
+        <div>hvis man trykker her kommer man over til makeWishList</div>
+    </a>
     <div class="blockWish">
         <table>
             <thead>
-                <tr>
-                    <th>Navn på Ønskelisten</th>
-                </tr>
+            <tr>
+                <th>Navn på Ønskelisten</th>
+            </tr>
             </thead>
             <tbody>
-                <tr th:each="wishlist : ${wishlist}">
-                    <td th:text="${wishlist.wishListName}"></td>
-                </tr>
+            <tr th:each="wishlist : ${wishlist}">
+                <td th:text="${wishlist.wishListName}"></td>
+            </tr>
             </tbody>
         </table>
     </div>
+
+    <div class="blockWish">
+        <table>
+            <thead>
+            <tr>
+                <th>Navn på Ønskelisten</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="wishlist : ${wishlist}">
+                <td th:text="${wishlist.wishListName}"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 </div>
 
 

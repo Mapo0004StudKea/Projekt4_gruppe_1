@@ -12,14 +12,18 @@ public class wishListController {
     @Autowired
     public WishListRepository wishListRepository;
 
-    @GetMapping("wishListSide")
+    @GetMapping("/wishListSide")
     public String wishListSide(){
-        return "wishListList";
+        return "wishListSide";
     }
 
-    @PostMapping("/MakeWishList")
+    @GetMapping("/MakeWishList")
     public String makeWishList(){
         return "makeWishList";
     }
 
+    @PostMapping("/MakeWishList")
+    public String newWishList(){
+        return "wishListSide";
+    }
 }

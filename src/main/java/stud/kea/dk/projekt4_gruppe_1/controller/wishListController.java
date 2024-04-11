@@ -35,6 +35,6 @@ public class wishListController {
     public String newWishList(@RequestParam("wishListName") String name){
         WishList wishList = new WishList(name);
         wishListRepository.createWishlist(wishList);
-        return "wishListSide";
+        return "redirect:wishListSide";
     }
 }

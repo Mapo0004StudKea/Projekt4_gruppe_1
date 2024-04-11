@@ -2,7 +2,7 @@
 
 .blockWish{
     display: flex;
-    background-color: rgba(26, 26, 26, 0.8);
+    background-color: white;
     border: 1px solid #1A1A1A;
     border-radius: 5px;
     width: 200px;

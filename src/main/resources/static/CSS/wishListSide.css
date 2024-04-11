@@ -10,3 +10,8 @@
     flex-direction: column;
     margin: 10%;
 }
+
+.blockCointere{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <link rel = "stylesheet" href="../Static/css/wishListSide.css" th:href ="@{css/wishListSide.css}">
 <head>
     <meta charset="UTF-8">
     <title>Dine ønskelister</title>
 </head>
 <body>
+    <div class="blockCointere">
+        <a href="makeWishList" class = "blockWish">
+            <div>hvis man trykker her kommer man over til makeWishList</div>
+        </a>
+    <div>
+        <a href="" class="blockWish">
+            <div>
+                <table>
+                    <tr>
+                        <th>Navn på Ønskelisten</th>
+                    </tr>
+                </table>
+                <tbody>
+                    <tr th:eche="wishlist ${wishlist} ">
+                        <td th:text="${wishlist.wi}"></td>
+
+                    </tr>
+
+                </tbody>
+
+            </div>
+        </a>
+
+    </div>
 
 
-<a href="makeWishList" class = "blockWish">
-    <div>hvis man trykker her kommer man over til makeWishList</div>
-</a>
+</div>
 
 
 </body>

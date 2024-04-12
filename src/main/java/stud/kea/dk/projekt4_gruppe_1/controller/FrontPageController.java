@@ -1,9 +1,12 @@
 package stud.kea.dk.projekt4_gruppe_1.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import stud.kea.dk.projekt4_gruppe_1.Model.User;
+import stud.kea.dk.projekt4_gruppe_1.Repository.UserRepository;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -11,6 +14,11 @@ import java.time.format.DateTimeParseException;
 
 @Controller
 public class FrontPageController {
+    @Autowired
+    UserRepository userRepository;
+
+
+
     @GetMapping("/login")
     public String loginPage() {
         return "Login-forside";
@@ -38,6 +46,8 @@ public class FrontPageController {
             @RequestParam("email") String email,
             @RequestParam("date") String dateOfBirth
     ) {
+        User user = new User(name, lastName, email, dateOfBirth);
+        userRepository.createUser(user);
         // Check if the date of birth is empty or null
         if (dateOfBirth == null || dateOfBirth.isEmpty()) {
             // Handle the case where the date of birth is empty

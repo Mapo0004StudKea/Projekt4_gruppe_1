@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Products</title>
+    <link rel = "stylesheet" href="../static/css/productpage.css" th:href="@{css/productpage.css}">
+</head>
+<body>
+<form action="createNewProducts" method="post">
+    <div>
+        <p>
+            <label for="productName-field">productName:</label>
+        <p>
+            <input id="productName-field" name="productName" type="text">
+        </p>
+        </p>
+        <p>
+            <label for="productLink-field">productLink:</label>
+        <p>
+            <input id="productLink-field" name="productLink" type="text">
+        </p>
+        </p>
+        <p>
+            <label for="productDescription-field">productDescription:</label>
+        <p>
+            <input id="productDescription-field" name="productDescription" type="text">
+        </p>
+        </p>
+        <p>
+            <label for="price-field">price:</label>
+        <p>
+            <input id="price-field" name="price" type="text">
+        </p>
+        </p>
+        <p>
+            <label for="quantity-field">quantity:</label>
+        <p>
+            <input id="quantity-field" name="quantity" type="text">
+        </p>
+        </p>
+    </div>
+    <input type="submit" value="Opret nyt product">
+</form>
+</body>
+</html>

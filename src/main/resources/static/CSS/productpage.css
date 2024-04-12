@@ -1,0 +1,41 @@
+.flex-Box_container {
+    display: flex;
+}
+
+
+.boxOne {
+    width: 30%;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.boxTwo {
+    width: 70%;
+    height: 500px;
+    border: 1px solid black;
+}
+
+h1 {
+    color: black;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #FFC601; /* Green color */
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

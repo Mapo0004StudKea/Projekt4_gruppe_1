@@ -30,7 +30,6 @@ public class wishListController {
     wishListRepository.getWishlistByid(id);
     return "redirect:producPage";// vi skal bruge et bestemt link her!
     }
-
     @GetMapping("/makeWishList")
     public String makeWishList(){
         return "makeWishList";

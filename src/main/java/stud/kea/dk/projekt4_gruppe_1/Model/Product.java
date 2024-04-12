@@ -3,6 +3,7 @@ package stud.kea.dk.projekt4_gruppe_1.Model;
 public class Product {
     int id;
     String productName;
+    String productLink;
     String productDescription;
     double price;
     int quantity;
@@ -10,21 +11,30 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, String productName, String productDescription, double price, int quantity) {
+    public Product(int id, String productName, String productLink,String productDescription, double price, int quantity) {
         this.id = id;
         this.productName = productName;
+        this.productLink = productLink;
         this.productDescription = productDescription;
         this.price = price;
         this.quantity = quantity;
     }
 
-    public Product(String productName, String productDescription, double price, int quantity) {
+    public Product(String productName, String productLink, String productDescription, double price, int quantity) {
         this.productName = productName;
+        this.productLink = productLink;
         this.productDescription = productDescription;
         this.price = price;
         this.quantity = quantity;
     }
 
+    public String getProductLink() {
+        return productLink;
+    }
+
+    public void setProductLink(String productLink) {
+        this.productLink = productLink;
+    }
 
     public int getId() {
         return id;

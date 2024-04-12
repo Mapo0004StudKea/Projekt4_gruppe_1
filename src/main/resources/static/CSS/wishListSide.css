@@ -3,7 +3,7 @@
 .blockWish{
     display: flex;
     background-color: white;
-    border: 1px solid #1A1A1A;
+    border: 5px solid indianred;
     border-radius: 5px;
     width: 200px;
     height: 300px;
@@ -13,4 +13,9 @@
 
 .blockCointere{
     display: flex;
+    background-image: url('../image/wishlist.jpg');
+    align-content: space-between;
+    justify-content: center;
+    text-align: center;
+    color: darkblue;
 }

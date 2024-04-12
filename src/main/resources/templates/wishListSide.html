@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <link rel = "stylesheet" href="../Static/css/wishListSide.css" th:href ="@{css/wishListSide.css}">
+<link rel = "stylesheet" href="../Static/css/header.css" th:href ="@{css/header.css}">
+<link rel = "stylesheet" href="../static/css/footer.css" th:href="@{css/footer.css}">
 <head>
     <meta charset="UTF-8">
     <title>Dine ønskelister</title>
 </head>
 <body>
+<header class="header">
+
+    <a href="/" class="image"></a>
+    <a href="/" class="forside"><p1>KoncertKavaranen</p1></a>
+
+    <nav class="navbar">
+        <a href="/">Koncerter</a>
+        <a href="/">Inspiration</a>
+        <a href="/wishListSide">Ønskeliste</a>
+        <a href="/">Login</a>
+    </nav>
+</header>
+
 <div class="blockCointere">
     <a href="makeWishList" class = "blockWish">
         <div>hvis man trykker her kommer man over til makeWishList</div>
@@ -17,31 +32,56 @@
                 <th>Navn på Ønskelisten</th>
             </tr>
             </thead>
-            <tbody>
-            <tr th:each="wishlist : ${wishlist}">
-                <td th:text="${wishlist.wishListName}"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="blockWish">
-        <table>
-            <thead>
-            <tr>
-                <th>Navn på Ønskelisten</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="wishlist : ${wishlist}">
-                <td th:text="${wishlist.wishListName}"></td>
-            </tr>
-            </tbody>
+                <tbody>
+                    <tr th:each="wishlist : ${wishlist}">
+                        <td>
+                            <a th:href="@{'/wishlist/' + ${wishlist.getId()}}">
+                                <span th:text="${wishlist.getWishListName()}"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
         </table>
     </div>
 </div>
-</div>
-
+<footer class ="footer">
+    <div class ="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>KoncertKavaranen</h4>
+                <ul>
+                    <li><a href="/">Om os</a> </li>
+                    <li><a href="/">Services</a> </li>
+                    <li><a href="/">privacy policy</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="/">Koncerter</a> </li>
+                    <li><a href="/">Inspiration</a> </li>
+                    <li><a href="/">Ønskeliste</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hjælp & kontakt</h4>
+                <ul>
+                    <li><a href="/">Kontakt os</a> </li>
+                    <li><a href="/">Hyppige spørgsmål</a> </li>
+                    <li><a href="/">Mere information</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Følg os!</h4>
+                <div class ="social-links">
+                    <a href="/"><i class ="fab fa-facebook-f"></i></a>
+                    <a href="/"><i class ="fab fa-instagram"></i></a>
+                    <a href="/"><i class ="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

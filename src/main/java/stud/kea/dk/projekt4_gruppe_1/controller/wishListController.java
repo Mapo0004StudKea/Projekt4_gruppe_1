@@ -25,6 +25,11 @@ public class wishListController {
         System.out.println(wishLists);
         return "wishListSide";
     }
+    @PostMapping("/wishListSide")
+    public String seeWishList(@RequestParam("id") int id){
+    wishListRepository.getWishlistByid(id);
+    return "redirect:producPage";// vi skal bruge et bestemt link her!
+    }
 
     @GetMapping("/makeWishList")
     public String makeWishList(){

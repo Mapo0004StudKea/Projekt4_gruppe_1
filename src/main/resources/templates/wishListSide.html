@@ -37,7 +37,7 @@
                 <tbody>
                     <tr th:each="wishlist : ${wishlist}">
                         <td>
-                            <a th:href="@{'/wishlist/' + ${wishlist.getId()}}">
+                            <a th:href="@{'/productPage/' + ${wishlist.getId()}}">
                                 <span th:text="${wishlist.getWishListName()}"></span>
                             </a>
                         </td>

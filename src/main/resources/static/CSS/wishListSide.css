@@ -1,14 +1,30 @@
 
-
 .blockWish{
     display: flex;
-    background-color: white;
-    border: 5px solid indianred;
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid #1A1A1A;
     border-radius: 5px;
     width: 200px;
     height: 300px;
     flex-direction: column;
     margin: 10%;
+}
+
+.blockWish span{
+
+}
+
+.blockWish1{
+    display: flex;
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid #1A1A1A;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+    margin: 10%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .blockCointere{
@@ -17,5 +33,4 @@
     align-content: space-between;
     justify-content: center;
     text-align: center;
-    color: darkblue;
 }

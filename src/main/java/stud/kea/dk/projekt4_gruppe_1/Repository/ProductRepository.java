@@ -15,8 +15,8 @@ public class ProductRepository {
     JdbcTemplate jdbcTemplate;
 
     public List<Product> getProductsList() {
-        String DISPLAY_PRODUCTLIST_SQL = "SELECT * FROM products";
-        List<Product> productList = jdbcTemplate.query(DISPLAY_PRODUCTLIST_SQL, new BeanPropertyRowMapper<>(Product.class));
+        String DISPLAY_SQL = "SELECT * FROM products";
+        List<Product> productList = jdbcTemplate.query(DISPLAY_SQL, new BeanPropertyRowMapper<>(Product.class));
         return productList;
     }
 

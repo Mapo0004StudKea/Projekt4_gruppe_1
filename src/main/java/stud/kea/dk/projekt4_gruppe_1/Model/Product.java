@@ -9,6 +9,7 @@ public class Product {
     String productDescription;
     double price;
     int quantity;
+    int wishlist_id;
 
     private List<WishList> wishLists;
 
@@ -23,21 +24,31 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, String productName, String productLink,String productDescription, double price, int quantity) {
+    public Product(int id, String productName, String productLink,String productDescription, double price, int quantity, int wishlist_id) {
         this.id = id;
         this.productName = productName;
         this.productLink = productLink;
         this.productDescription = productDescription;
         this.price = price;
         this.quantity = quantity;
+        this.wishlist_id = wishlist_id;
     }
 
-    public Product(String productName, String productLink, String productDescription, double price, int quantity) {
+    public Product(String productName, String productLink, String productDescription, double price, int quantity, int wishlist_id) {
         this.productName = productName;
         this.productLink = productLink;
         this.productDescription = productDescription;
         this.price = price;
         this.quantity = quantity;
+        this.wishlist_id = wishlist_id;
+    }
+
+    public int getWishlist_id() {
+        return wishlist_id;
+    }
+
+    public void setWishlist_id(int wishlist_id) {
+        this.wishlist_id = wishlist_id;
     }
 
     public String getProductLink() {

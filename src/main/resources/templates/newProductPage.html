@@ -8,7 +8,7 @@
 <h1 th:text="${wishlist.getWishListName()}">test</h1>
 <div class="flex-Box_container">
     <div class="boxOne">
-        <a href="/CreateProducts">
+        <a href="/CreateProducts" th:href="@{'/CreateProducts/' + ${wishlist.getId()}}">
             <h1>Tilføj Nyt Product</h1>
         </a>
 

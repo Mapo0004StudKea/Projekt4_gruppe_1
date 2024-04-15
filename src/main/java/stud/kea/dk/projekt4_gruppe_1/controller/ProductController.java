@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import stud.kea.dk.projekt4_gruppe_1.Model.Product;
@@ -28,8 +29,11 @@ public class ProductController {
         return "productPage";
     }
 
-    @GetMapping("/CreateProducts")
-    public String showCreateNewProducts() {
+    @GetMapping("/CreateProducts/{id}")
+    public String showCreateNewProducts(
+            @PathVariable("id") int wishlist_id, Model model
+    ) {
+        model.addAttribute("wishlistid", wishlist_id);
         return "createNewProducts";
     }
 
@@ -39,10 +43,12 @@ public class ProductController {
             @RequestParam("productLink") String productLink,
             @RequestParam("productDescription") String productDescription,
             @RequestParam("price") double price,
-            @RequestParam("quantity") int quantity
+            @RequestParam("quantity") int quantity,
+            @RequestParam("wishlist_id") int wishlist_id
+
     ) {
-        Product product = new Product(productName, productLink, productDescription, price, quantity);
+        Product product = new Product(productName, productLink, productDescription, price, quantity, wishlist_id);
         productRepository.createNewProducts(product);
-        return "redirect:productPage";
+        return "redirect:wishlist/"+wishlist_id;
     }
 }

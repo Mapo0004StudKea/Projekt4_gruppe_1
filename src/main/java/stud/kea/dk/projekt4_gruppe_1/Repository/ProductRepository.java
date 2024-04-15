@@ -27,8 +27,8 @@ public class ProductRepository {
     }
 
     public void createNewProducts(Product product) {
-        final String INSERT_PRODUCTS_SQL = "INSERT INTO products (productName, productLink, productDescription, price, quantity) VALUES (?,?,?,?,?)";
-        jdbcTemplate.update(INSERT_PRODUCTS_SQL, product.getProductName(), product.getProductLink(), product.getProductDescription(), product.getPrice(), product.getQuantity());
+        final String INSERT_PRODUCTS_SQL = "INSERT INTO products (productName, productLink, productDescription, price, quantity, wishlist_id) VALUES (?,?,?,?,?,?)";
+        jdbcTemplate.update(INSERT_PRODUCTS_SQL, product.getProductName(), product.getProductLink(), product.getProductDescription(), product.getPrice(), product.getQuantity(), product.getWishlist_id());
     }
 
 

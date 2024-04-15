@@ -6,7 +6,7 @@
     <link rel = "stylesheet" href="../static/css/productpage.css" th:href="@{css/productpage.css}">
 </head>
 <body>
-<form action="createNewProducts" method="post">
+<form action="/createNewProducts" method="post">
     <div>
         <p>
             <label for="productName-field">productName:</label>
@@ -39,10 +39,10 @@
             <input id="quantity-field" name="quantity" type="text">
         </p>
         <p>
-            <label for="wishlistid-field">wishlistid:</label>
+            <label for="wishlist_id-field" hidden>wishlist_id:</label>
         </p>
         <p>
-            <input id="wishlistid-field" name="wishlistid" type="text">
+            <input id="wishlist_id-field" name="wishlist_id" type="text" hidden th:value="${wishlistid}">
         </p>
     </div>
     <input type="submit" value="Opret nyt product">

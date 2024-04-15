@@ -15,14 +15,21 @@ public class ProductRepository {
     JdbcTemplate jdbcTemplate;
 
     public List<Product> getProductsList() {
-        String DISPLAY_SQL = "SELECT * FROM products";
-        List<Product> productList = jdbcTemplate.query(DISPLAY_SQL, new BeanPropertyRowMapper<>(Product.class));
+        String DISPLAY_PRODUCTLIST_SQL = "SELECT * FROM products";
+        List<Product> productList = jdbcTemplate.query(DISPLAY_PRODUCTLIST_SQL, new BeanPropertyRowMapper<>(Product.class));
         return productList;
+    }
+
+    public List<Product> getProductListBySpecifiedId(int wishlistId) {
+        String DISPLAY_ID_SQL = "SELECT * FROM Products WHERE wishlist_id = ?;";
+        List<Product> productListById = jdbcTemplate.query(DISPLAY_ID_SQL, new Object[]{wishlistId},  new BeanPropertyRowMapper<>(Product.class));
+        return productListById;
     }
 
     public void createNewProducts(Product product) {
         final String INSERT_PRODUCTS_SQL = "INSERT INTO products (productName, productLink, productDescription, price, quantity) VALUES (?,?,?,?,?)";
         jdbcTemplate.update(INSERT_PRODUCTS_SQL, product.getProductName(), product.getProductLink(), product.getProductDescription(), product.getPrice(), product.getQuantity());
     }
+
 
 }

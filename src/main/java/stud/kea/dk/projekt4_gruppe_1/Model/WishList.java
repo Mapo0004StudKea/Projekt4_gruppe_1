@@ -1,8 +1,20 @@
 package stud.kea.dk.projekt4_gruppe_1.Model;
 
+import java.util.List;
+
 public class WishList {
     int id;
     String wishListName;
+
+    private List<Product> products;
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
 
     public WishList() {
     }

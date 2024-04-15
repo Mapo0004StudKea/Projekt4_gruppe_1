@@ -17,8 +17,6 @@ public class FrontPageController {
     @Autowired
     UserRepository userRepository;
 
-
-
     @GetMapping("/login")
     public String loginPage() {
         return "Login-forside";

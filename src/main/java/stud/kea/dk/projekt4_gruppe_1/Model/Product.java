@@ -1,5 +1,7 @@
 package stud.kea.dk.projekt4_gruppe_1.Model;
 
+import java.util.List;
+
 public class Product {
     int id;
     String productName;
@@ -7,6 +9,16 @@ public class Product {
     String productDescription;
     double price;
     int quantity;
+
+    private List<WishList> wishLists;
+
+    public List<WishList> getWishLists() {
+        return wishLists;
+    }
+
+    public void setWishLists(List<WishList> wishLists) {
+        this.wishLists = wishLists;
+    }
 
     public Product() {
     }

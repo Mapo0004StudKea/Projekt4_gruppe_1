@@ -18,11 +18,10 @@ public class ProductController {
     @Autowired
     public ProductRepository productRepository;
     @Autowired
-   public WishListRepository wishListRepository;
+    public WishListRepository wishListRepository;
 
     @GetMapping("/productPage")
-    public String showProductList(Model model, @RequestParam("id") int id) {
-        wishListRepository.getWishlistByid(id);
+    public String showProductList(Model model) {
         List<Product> productList = productRepository.getProductsList();
         model.addAttribute("products", productList);
         System.out.println(productList);

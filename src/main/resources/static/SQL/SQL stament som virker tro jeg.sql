@@ -1,18 +1,18 @@
-CREATE TABLE IF NOT EXISTS wishlist (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    wishlistname VARCHAR(100) NOT NULL
+CREATE TABLE WishList (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    wishListName VARCHAR(255)
 );
 
 -- Opret produkttabellen med en fremmednøgle til wishlist tabellen
-CREATE TABLE IF NOT EXISTS products (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    productname VARCHAR(100),
-    productlink VARCHAR(250),
-    productdescription VARCHAR(500),
-    price DOUBLE,
-    quantity INT,
-    wishlistid INT,
-    FOREIGN KEY (wishlistid) REFERENCES wishlist(id) ON UPDATE CASCADE ON DELETE RESTRICT
+CREATE TABLE Products (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   productName VARCHAR(255),
+   productLink VARCHAR(255),
+   productDescription TEXT,
+   price DOUBLE,
+   quantity INT,
+   wishlist_id INT,
+   FOREIGN KEY (wishlist_id) REFERENCES WishList(id)
 );
 
 SELECT products.*, wishlist.wishlistname

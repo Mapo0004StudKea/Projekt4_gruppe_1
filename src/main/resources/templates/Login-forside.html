@@ -3,30 +3,38 @@
 <link rel = "stylesheet" href="../Static/css/header.css" th:href ="@{css/header.css}">
 <link rel = "stylesheet" href="../Static/css/body.css" th:href ="@{css/body.css}">
 <link rel = "stylesheet" href="../Static/css/Login-forside-baggrund.css" th:href ="@{css/Login-forside-baggrund.css}">
+<link rel = "stylesheet" href="../Static/css/footer.css" th:href="@{css/footer.css}">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
 </head>
 <body>
-<div class="header">
-    <p1> Login </p1>
-</div>
+<header class="header">
+
+    <a href="/" class="image"></a>
+    <a href="/" class="forside"><p1>KoncertKavaranen</p1></a>
+
+    <nav class="navbar">
+        <a href="/">Opret</a>
+        <a href="/">Login</a>
+    </nav>
+</header>
 
 <div class="loginForside-background">
- <div class="block1">
+ <div class="forside-block">
+     <div class="block1">
+        <h1>Velkommen til koncertKarvanen</h1>
+     </div>
+
      <div class="block2">
-        <h1>Velkommen</h1>
-         <h2>til koncertkarvanen</h2>
+         <p1>Alle dine ønsker til kulturelle oplevelser samlet et sted</p1>
      </div>
-
      <div class="block3">
-        <p1> Ville du oprette en konto?</p1>
+         <p>KoncertKarvanen gør det nemt for dig at gemme dine største ønsker og dele dem med folk omkring dig</p>
      </div>
-
      <div class="block4">
-     <a href="createAccount" class="button"> Opret her!</a>
+         <a href="createAccount" class="button"> Opret en profil</a>
      </div>
-
  </div>
 </div>
 

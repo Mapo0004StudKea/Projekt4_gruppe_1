@@ -19,6 +19,7 @@
     height: 60%;
     flex-direction: column;
     margin: 10%;
+
 }
 
 .block1{
@@ -26,8 +27,9 @@
     margin: 3%;
     font-size: 40px;
     font-weight: bolder;
+
 }
-.block2 p{
+.block2 {
     display: flex;
     font-size: 25px;
     margin: 3%;
@@ -79,3 +81,4 @@
     background-color: wheat;
 
 }
+

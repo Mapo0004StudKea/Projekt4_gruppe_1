@@ -37,6 +37,9 @@ public class FrontPageController {
         return "createAccount";
     }
 
+    @GetMapping("loginside")
+    public String visLogin() {return "loginside";}
+
     @PostMapping("/createAccount")
     public String createUser(
             @RequestParam("name") String name,

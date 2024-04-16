@@ -3,22 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Opdater Product</title>
+    <style>
+        body {
+            background-color: wheat;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-inputs {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .form-inputs h1 {
+            margin-bottom: 20px;
+        }
+
+        .form-inputs label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-inputs input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .form-inputs input[type="submit"] {
+            width: 100%;
+            background-color: #FFC601;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-inputs input[type="submit"]:hover {
+            background-color: #FFD632;
+        }
+    </style>
 </head>
 <body>
-<h1>Opdater Produkter</h1>
-<form action="/updateProduct" method="post">
-    <input name="id" type="hidden" th:value="${product.id}" th:name="id">
-    <label for="productName-field">productName:</label>
-    <input id="productName-field" name="productName" type="text" th:value="${product.productName}">
-    <label for="productLink-field">productLink:</label>
-    <input id="productLink-field" name="productLink" type="text" th:value="${product.productLink}">
-    <label for="productDescription-field">productDescription:</label>
-    <input id="productDescription-field" name="productDescription" type="text" th:value="${product.productDescription}">
-    <label for="price-field">Price:</label>
-    <input id="price-field" name="price" type="text" th:value="${product.price}">
-    <label for="quantity-field">Quantity:</label>
-    <input id="quantity-field" name="quantity" type="text" th:value="${product.quantity}">
-    <input type="submit" value="Opdater product">
-</form>
+<div class="form-container">
+    <div class="form-inputs">
+        <h1>Opdater Produkter</h1>
+        <form action="/updateProduct" method="post">
+            <input name="id" type="hidden" th:value="${product.id}" th:name="id">
+            <label for="productName-field">productName:</label>
+            <input id="productName-field" name="productName" type="text" th:value="${product.productName}">
+            <label for="productLink-field">productLink:</label>
+            <input id="productLink-field" name="productLink" type="text" th:value="${product.productLink}">
+            <label for="productDescription-field">productDescription:</label>
+            <input id="productDescription-field" name="productDescription" type="text" th:value="${product.productDescription}">
+            <label for="price-field">Price:</label>
+            <input id="price-field" name="price" type="text" th:value="${product.price}">
+            <label for="quantity-field">Quantity:</label>
+            <input id="quantity-field" name="quantity" type="text" th:value="${product.quantity}">
+            <input type="submit" value="Opdater product">
+        </form>
+    </div>
+</div>
 </body>
 </html>

@@ -7,47 +7,52 @@
         }
         .form-container {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        .form-container .form-inputs {
-            width: 70%;
-            height: auto;
+        .form-inputs {
+            width: 400px;
             padding: 20px;
-        }
-
-        .form-container .form-inputs p {
-            margin: 10px 0;
-        }
-
-        .form-container .form-inputs label {
-            display: block;
-        }
-
-        .form-container .form-inputs input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid black;
             border-radius: 5px;
         }
 
-        .form-container .form-inputs input[type="submit"] {
+        .form-inputs h1 {
+            margin-bottom: 20px;
+        }
+
+        .form-inputs label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-inputs input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .form-inputs input[type="submit"] {
+            width: 100%;
             background-color: #FFC601;
             color: black;
             border: none;
-            padding: 10px 20px;
+            padding: 10px;
             border-radius: 5px;
             cursor: pointer;
         }
 
-        .form-container .form-inputs input[type="submit"]:hover {
+        .form-inputs input[type="submit"]:hover {
             background-color: #FFD632;
         }
     </style>
 </head>
 <body>
-
 <div class="form-container">
-
     <div class="form-inputs">
         <h1>Enter form information</h1>
         <form action="/createNewProducts" method="post">
@@ -71,9 +76,7 @@
                 <label for="quantity-field">Quantity:</label>
                 <input id="quantity-field" name="quantity" type="text">
             </p>
-            <p>
-                <input id="wishlist_id-field" name="wishlist_id" type="text" hidden th:value="${wishlistid}">
-            </p>
+            <input id="wishlist_id-field" name="wishlist_id" type="text" hidden th:value="${wishlistid}">
             <p>
                 <input type="submit" value="Create New Product">
             </p>

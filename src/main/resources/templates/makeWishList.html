@@ -3,18 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Wish List</title>
+    <style>
+        body {
+            background-color: wheat;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-inputs {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-inputs label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-inputs input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-inputs input[type="submit"] {
+            width: 100%;
+            background-color: #FFC601;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-inputs input[type="submit"]:hover {
+            background-color: #FFD632;
+        }
+    </style>
 </head>
 <body>
-<h2> Indtast dine oplysninger her </h2>
 
-<form action="makeWishList" method="post">
-    <div>
-        <label> hvad skal din ønskeListe hedde? </label>
-        <input id="name-field" name="wishListName" type="text">
+
+<div class="form-container">
+    <div class="form-inputs">
+        <h2> Indtast dine oplysninger her </h2>
+        <form action="makeWishList" method="post">
+            <div>
+                <label for="name-field">What should your wish list be called?</label>
+                <input id="name-field" name="wishListName" type="text">
+            </div>
+            <input type="submit" value="Create Wish List">
+        </form>
     </div>
-
-    <input type="submit" value="Opret ønske Liste">
-
-</form>
+</div>
 </body>
 </html>

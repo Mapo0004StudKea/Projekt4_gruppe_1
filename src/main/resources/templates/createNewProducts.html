@@ -1,46 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body {
+            background-color: wheat;
+        }
+        .form-container {
+            display: flex;
+        }
+
+        .form-container .form-inputs {
+            width: 70%;
+            height: auto;
+            padding: 20px;
+        }
+
+        .form-container .form-inputs p {
+            margin: 10px 0;
+        }
+
+        .form-container .form-inputs label {
+            display: block;
+        }
+
+        .form-container .form-inputs input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container .form-inputs input[type="submit"] {
+            background-color: #FFC601;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container .form-inputs input[type="submit"]:hover {
+            background-color: #FFD632;
+        }
+    </style>
+</head>
 <body>
-<form action="/createNewProducts" method="post">
-    <div>
-        <p>
-            <label for="productName-field">productName:</label>
-        </p>
-        <p>
-            <input id="productName-field" name="productName" type="text">
-        </p>
-        <p>
-            <label for="productLink-field">productLink:</label>
-        </p>
-        <p>
-            <input id="productLink-field" name="productLink" type="text">
-        </p>
-        <p>
-            <label for="productDescription-field">productDescription:</label>
-        </p>
-        <p>
-            <input id="productDescription-field" name="productDescription" type="text">
-        </p>
-        <p>
-            <label for="price-field">price:</label>
-        </p>
-        <p>
-            <input id="price-field" name="price" type="text">
-        </p>
-        <p>
-            <label for="quantity-field">quantity:</label>
-        </p>
-        <p>
-            <input id="quantity-field" name="quantity" type="text">
-        </p>
-        <p>
-            <label for="wishlist_id-field" hidden>wishlist_id:</label>
-        </p>
-        <p>
-            <input id="wishlist_id-field" name="wishlist_id" type="text" hidden th:value="${wishlistid}">
-        </p>
+
+<div class="form-container">
+
+    <div class="form-inputs">
+        <h1>Enter form information</h1>
+        <form action="/createNewProducts" method="post">
+            <p>
+                <label for="productName-field">Product Name:</label>
+                <input id="productName-field" name="productName" type="text">
+            </p>
+            <p>
+                <label for="productLink-field">Product Link:</label>
+                <input id="productLink-field" name="productLink" type="text">
+            </p>
+            <p>
+                <label for="productDescription-field">Product Description:</label>
+                <input id="productDescription-field" name="productDescription" type="text">
+            </p>
+            <p>
+                <label for="price-field">Price:</label>
+                <input id="price-field" name="price" type="text">
+            </p>
+            <p>
+                <label for="quantity-field">Quantity:</label>
+                <input id="quantity-field" name="quantity" type="text">
+            </p>
+            <p>
+                <input id="wishlist_id-field" name="wishlist_id" type="text" hidden th:value="${wishlistid}">
+            </p>
+            <p>
+                <input type="submit" value="Create New Product">
+            </p>
+        </form>
     </div>
-    <input type="submit" value="Opret nyt product">
-</form>
+</div>
 </body>
 </html>

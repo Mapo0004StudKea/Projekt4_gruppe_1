@@ -59,17 +59,17 @@
         <h1>Opdater Produkter</h1>
         <form action="/updateProduct" method="post">
             <input name="id" type="hidden" th:value="${product.id}" th:name="id">
-            <label for="productName-field">productName:</label>
+            <label for="productName-field">Produkt Navn:</label>
             <input id="productName-field" name="productName" type="text" th:value="${product.productName}">
-            <label for="productLink-field">productLink:</label>
+            <label for="productLink-field">Product Link:</label>
             <input id="productLink-field" name="productLink" type="text" th:value="${product.productLink}">
-            <label for="productDescription-field">productDescription:</label>
+            <label for="productDescription-field">Product Beskrivelse:</label>
             <input id="productDescription-field" name="productDescription" type="text" th:value="${product.productDescription}">
-            <label for="price-field">Price:</label>
+            <label for="price-field">Pris:</label>
             <input id="price-field" name="price" type="text" th:value="${product.price}">
-            <label for="quantity-field">Quantity:</label>
+            <label for="quantity-field">Antal:</label>
             <input id="quantity-field" name="quantity" type="text" th:value="${product.quantity}">
-            <input type="submit" value="Opdater product">
+            <input type="submit" value="Opdater Produkt">
         </form>
     </div>
 </div>

@@ -5,14 +5,14 @@ CREATE TABLE WishList (
 
 -- Opret produkttabellen med en fremmednøgle til wishlist tabellen
 CREATE TABLE Products (
-   id INT AUTO_INCREMENT PRIMARY KEY,
-   productName VARCHAR(255),
-   productLink VARCHAR(255),
-   productDescription TEXT,
-   price DOUBLE,
-   quantity INT,
-   wishlist_id INT,
-   FOREIGN KEY (wishlist_id) REFERENCES WishList(id)
+id INT AUTO_INCREMENT PRIMARY KEY,
+productName VARCHAR(255),
+productLink VARCHAR(255),
+productDescription TEXT,
+price DOUBLE,
+quantity INT,
+wishlist_id INT,
+FOREIGN KEY (wishlist_id) REFERENCES WishList(id) ON DELETE CASCADE
 );
 
 SELECT products.*, wishlist.wishlistname

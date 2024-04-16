@@ -54,31 +54,31 @@
 <body>
 <div class="form-container">
     <div class="form-inputs">
-        <h1>Enter form information</h1>
+        <h1>Skriv information</h1>
         <form action="/createNewProducts" method="post">
             <p>
-                <label for="productName-field">Product Name:</label>
+                <label for="productName-field">Produkt Navne:</label>
                 <input id="productName-field" name="productName" type="text">
             </p>
             <p>
-                <label for="productLink-field">Product Link:</label>
+                <label for="productLink-field">Produkt Link:</label>
                 <input id="productLink-field" name="productLink" type="text">
             </p>
             <p>
-                <label for="productDescription-field">Product Description:</label>
+                <label for="productDescription-field">Product Beskrivelse:</label>
                 <input id="productDescription-field" name="productDescription" type="text">
             </p>
             <p>
-                <label for="price-field">Price:</label>
+                <label for="price-field">Pris:</label>
                 <input id="price-field" name="price" type="text">
             </p>
             <p>
-                <label for="quantity-field">Quantity:</label>
+                <label for="quantity-field">Antal:</label>
                 <input id="quantity-field" name="quantity" type="text">
             </p>
             <input id="wishlist_id-field" name="wishlist_id" type="text" hidden th:value="${wishlistid}">
             <p>
-                <input type="submit" value="Create New Product">
+                <input type="submit" value="Opret nyt produkt">
             </p>
         </form>
     </div>

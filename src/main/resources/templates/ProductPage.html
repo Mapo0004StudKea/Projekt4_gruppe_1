@@ -3,6 +3,9 @@
 <head>
     <title>vis ønskeliste med alle produkter</title>
 <style>
+    body {
+        background-color: wheat;
+    }
     .flex-Box_container {
         display: flex;
     }
@@ -20,28 +23,173 @@
     table {
         width: 100%;
         border-collapse: collapse;
+
     }
     th, td {
         border: 1px solid #ccc;
         padding: 10px;
         text-align: left;
+        color: #1A1A1A;
     }
     th {
         background-color: #FFC601; /* Green color */
         color: black;
     }
-    tr:nth-child(even) {
+    tr {
         background-color: #f9f9f9;
+    }
+    td {
+        background-color: #f9f9f9;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        color: #FFC601;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        margin: 0;
+    }
+    .image {
+        background-image: url(/image/guitar.png);
+        background-size: cover;
+        background-position: left top;
+        width: 60px;
+        height: 60px;
+    }
+    .forside{
+        font-size: 30px;
+        text-decoration: none;
+        margin-right: auto;
+    }
+    .navbar a{
+        position: relative;
+        font-size: 18px;
+        justify-content: space-evenly;
+        text-align: center;
+        text-decoration: none;
+        margin-right: 100px;
+    }
+    .navbar a::before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #FFC601;
+        transition: 1s;
+    }
+    .navbar a:hover::before{
+        width: 100%;
+    }
+    .seperator {
+        height: 125px;
+    }
+    .seperator2 {
+        height: 50px;
+    }
+    .container{
+        max-width: 1170px;
+        margin: auto;
+
+    }
+    ul{
+        list-style: none;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer{
+        background-color: #1A1A1A;
+        padding: 70px 0;
+    }
+    .footer-col{
+        width: 25%;
+        padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #FFC601;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #FFC601;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #ffe815;
+        padding-left: 5px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #FFC601;
+    }
+    .footer-col .social-links a:hover{
+        background-color: #ffe815;
     }
 </style>
 </head>
 <body>
+<header class="header">
+
+    <a href="/" class="image"></a>
+    <a href="/" class="forside"><p1>KoncertKavaranen</p1></a>
+
+    <nav class="navbar">
+        <a href="/">Koncerter</a>
+        <a href="/">Inspiration</a>
+        <a href="/wishListSide">Ønskeliste</a>
+        <a href="/">Login</a>
+    </nav>
+</header>
+<div class="seperator"></div>
 <h1 th:text="${wishlist.getWishListName()}"></h1>
 <div class="flex-Box_container">
     <div class="boxOne">
         <h1>Tilføj Nyt Product</h1>
-        <a href="/CreateProducts" th:href="@{'/CreateProducts/' + ${wishlist.getId()}}">
-            <button>Klik her</button>
+        <div class="seperator2"></div>
+        <a href="/CreateProducts" th:href="@{'/CreateProducts/' + ${wishlist.getId()}}" style="color: #1A1A1A">
+            <button style="color: #1A1A1A">Klik her</button>
         </a>
     </div>
     <div class="boxTwo">
@@ -60,15 +208,15 @@
         <tbody>
             <tr th:each="product : ${products}">
                 <td th:text="${product.productName}">Name</td>
-                <td><a th:href="${product.productLink}" th:text="${product.productLink}">Link</a></td>
+                <td><a th:href="${product.productLink}" th:text="${product.productLink}" style="color: darkblue">Link</a></td>
                 <td th:text="${product.productDescription}">Description</td>
                 <td th:text="${product.price}">Price</td>
                 <td th:text="${product.quantity}">Quantity</td>
                 <td>
-                    <a th:href="@{'/updateProduct/'+${product.id}}">opdater</a>
+                    <a th:href="@{'/updateProduct/'+${product.id}}" style="color: darkblue">opdater</a>
                 </td>
                 <td>
-                    <a th:href="@{'/deleteFromProducts/'+${product.id}}">Fjern</a>
+                    <a th:href="@{'/deleteFromProducts/'+${product.id}}" style="color: darkblue">Fjern</a>
                 </td>
             </tr>
         </tbody>
@@ -76,7 +224,46 @@
     </div>
 </div>
 <a href="/wishListSide" th:href="@{/wishListSide}">
-    <button>Tilbage til wishlist</button>
+    <button style="color: #1A1A1A">Tilbage til wishlist</button>
 </a>
+<div class="seperator2"></div>
+<footer class ="footer">
+    <div class ="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>KoncertKavaranen</h4>
+                <ul>
+                    <li><a href="/">Om os</a> </li>
+                    <li><a href="/">Services</a> </li>
+                    <li><a href="/">privacy policy</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="/">Koncerter</a> </li>
+                    <li><a href="/">Inspiration</a> </li>
+                    <li><a href="/">Ønskeliste</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hjælp & kontakt</h4>
+                <ul>
+                    <li><a href="/">Kontakt os</a> </li>
+                    <li><a href="/">Hyppige spørgsmål</a> </li>
+                    <li><a href="/">Mere information</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Følg os!</h4>
+                <div class ="social-links">
+                    <a href="/"><i class ="fab fa-facebook-f"></i></a>
+                    <a href="/"><i class ="fab fa-instagram"></i></a>
+                    <a href="/"><i class ="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

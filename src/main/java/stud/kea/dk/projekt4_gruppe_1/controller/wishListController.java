@@ -1,5 +1,6 @@
 package stud.kea.dk.projekt4_gruppe_1.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -60,5 +61,16 @@ public class wishListController {
         List<Product> productList = productRepository.getProductListBySpecifiedId(ListeId);
         model.addAttribute("products", productList);
         return "ProductPage";
+    }
+
+    @GetMapping("/deleteFromWishlist/{id}")
+    public String deleteWishlistEntry(@PathVariable("id") int id, HttpServletRequest request) {
+        wishListRepository.deleteFromWishlist(id);
+        String referrer = request.getHeader("referer");
+        if (referrer != null && !referrer.isEmpty()) {
+            return "redirect:" + referrer;
+        } else {
+            return "redirect:/";
+        }
     }
 }

@@ -1,4 +1,4 @@
-package stud.kea.dk.projekt4_gruppe_1.Controller;
+package stud.kea.dk.projekt4_gruppe_1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

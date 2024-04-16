@@ -7,13 +7,13 @@
     color: white;
     align-items: center;
     position: relative;
+    justify-content: center;
 }
 
 .forside-block {
     display: flex;
-    text-align: center;
-    background-color: rgba(26, 26, 26, 0.8);
-    border: 1px solid #1A1A1A;
+    text-align: initial;
+    border: 3px solid #FFC601;
     border-radius: 5px;
     width: 30%;
     height: 60%;
@@ -24,19 +24,22 @@
 .block1{
     display: flex;
     margin: 3%;
-    h1{
-        color: #FFC601;
-    }
-    flex-direction: column;
-    justify-content: center;
-    font-size: 20px;
+    font-size: 40px;
+    font-weight: bolder;
 }
-.block2{
+.block2 p{
     display: flex;
     font-size: 25px;
-    margin: 5%;
-    justify-content: center;
+    margin: 3%;
     font-weight: normal;
+}
+.block3{
+    display: flex;
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 3%;
+
+
 }
 .block4{
     display: flex;
@@ -45,8 +48,6 @@
     justify-content: center;
     font-size: 18px;
     font-weight: lighter;
-
-
 }
 
 .button {
@@ -54,11 +55,27 @@
     background-color: #FFC601;
     color: #1A1A1A;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .button:hover {
     background-color: wheat;
+}
+.navbar2 a{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #FFC601;
+    color: #1A1A1A;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar2 a:hover{
+    background-color: wheat;
+
 }

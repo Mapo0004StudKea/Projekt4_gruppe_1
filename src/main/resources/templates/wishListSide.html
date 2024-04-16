@@ -32,6 +32,8 @@
             <thead>
             <tr>
                 <th>Navn på Ønskelisten</th>
+
+
             </tr>
             </thead>
                 <tbody>
@@ -41,6 +43,12 @@
                                 <span th:text="${wishlist.getWishListName()}"></span>
                             </a>
                         </td>
+                        <td>
+                            <a th:href="@{'/deleteFromWishlist/'+${wishlist.getId()}}"> Fjern ønskeliste</a>
+                        </td>
+
+
+
                     </tr>
                 </tbody>
         </table>

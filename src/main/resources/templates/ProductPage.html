@@ -2,16 +2,47 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>vis ønskeliste med alle produkter</title>
-    <link rel = "stylesheet" href="../static/css/productpage.css" th:href="@{css/productpage.css}">
+<style>
+    .flex-Box_container {
+        display: flex;
+    }
+    .boxOne {
+        width: 20%;
+        height: 500px;
+    }
+    .boxTwo {
+        width: 80%;
+        height: 500px;
+    }
+    h1 {
+        color: black;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #FFC601; /* Green color */
+        color: black;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
 </head>
 <body>
-<h1 th:text="${wishlist.getWishListName()}">test</h1>
+<h1 th:text="${wishlist.getWishListName()}"></h1>
 <div class="flex-Box_container">
     <div class="boxOne">
+        <h1>Tilføj Nyt Product</h1>
         <a href="/CreateProducts" th:href="@{'/CreateProducts/' + ${wishlist.getId()}}">
-            <h1>Tilføj Nyt Product</h1>
+            <button>Klik her</button>
         </a>
-
     </div>
     <div class="boxTwo">
     <table>
@@ -29,7 +60,7 @@
         <tbody>
             <tr th:each="product : ${products}">
                 <td th:text="${product.productName}">Name</td>
-                <td th:text="${product.productLink}">Link</td>
+                <td><a th:href="${product.productLink}" th:text="${product.productLink}">Link</a></td>
                 <td th:text="${product.productDescription}">Description</td>
                 <td th:text="${product.price}">Price</td>
                 <td th:text="${product.quantity}">Quantity</td>

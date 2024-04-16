@@ -40,6 +40,14 @@ public class FrontPageController {
     @GetMapping("loginside")
     public String visLogin() {return "loginside";}
 
+    @PostMapping("loginside")
+    public String submitLogin()
+            {
+        return "redirect:/FrontPage";
+    }
+
+
+
     @PostMapping("/createAccount")
     public String createUser(
             @RequestParam("name") String name,
@@ -60,7 +68,7 @@ public class FrontPageController {
             // Parse the date string to a LocalDate object
             LocalDate date = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
-        /*User user = new User(name, lastName, email, dateOfBirth);
+        /*Useruser = new User(name, lastName, email, dateOfBirth);
         UserRepository.create(user);*/
         } catch (DateTimeParseException e) {
             // Handle the case where the date format is invalid

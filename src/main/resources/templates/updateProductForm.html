@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdater Product</title>
+</head>
+<body>
+<h1>Opdater Produkter</h1>
+<form action="/updateProduct" method="post">
+    <input name="id" type="hidden" th:value="${product.id}" th:name="id">
+    <label for="productName-field">productName:</label>
+    <input id="productName-field" name="productName" type="text" th:value="${product.productName}">
+    <label for="productLink-field">productLink:</label>
+    <input id="productLink-field" name="productLink" type="text" th:value="${product.productLink}">
+    <label for="productDescription-field">productDescription:</label>
+    <input id="productDescription-field" name="productDescription" type="text" th:value="${product.productDescription}">
+    <label for="price-field">Price:</label>
+    <input id="price-field" name="price" type="text" th:value="${product.price}">
+    <label for="quantity-field">Quantity:</label>
+    <input id="quantity-field" name="quantity" type="text" th:value="${product.quantity}">
+    <input type="submit" value="Opdater product">
+</form>
+</body>
+</html>

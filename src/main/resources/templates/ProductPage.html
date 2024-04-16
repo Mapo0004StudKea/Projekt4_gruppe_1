@@ -22,6 +22,7 @@
                 <th>Product beskrivelse</th>
                 <th>Pris</th>
                 <th>Antal</th>
+                <th>Opdater</th>
                 <th>Fjern</th>
             </tr>
         </thead>
@@ -32,6 +33,9 @@
                 <td th:text="${product.productDescription}">Description</td>
                 <td th:text="${product.price}">Price</td>
                 <td th:text="${product.quantity}">Quantity</td>
+                <td>
+                    <a th:href="@{'/updateProduct/'+${product.id}}">opdater</a>
+                </td>
                 <td>
                     <a th:href="@{'/deleteFromProducts/'+${product.id}}">Fjern</a>
                 </td>

@@ -38,7 +38,7 @@ public class ProductRepository {
 
     public Product getProductById(int id) {
         String GET_ID_SQL = "SELECT * FROM products WHERE id = ?";
-        return jdbcTemplate.queryForObject(GET_ID_SQL, new Object[]{}, new BeanPropertyRowMapper<>(Product.class));
+        return jdbcTemplate.queryForObject(GET_ID_SQL, new Object[]{id}, new BeanPropertyRowMapper<>(Product.class));
     }
 
     public void updateProductEntry(Product product) {

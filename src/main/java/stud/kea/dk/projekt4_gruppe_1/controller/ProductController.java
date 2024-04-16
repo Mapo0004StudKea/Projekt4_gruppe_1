@@ -12,8 +12,6 @@ import stud.kea.dk.projekt4_gruppe_1.Model.Product;
 import stud.kea.dk.projekt4_gruppe_1.Repository.ProductRepository;
 import stud.kea.dk.projekt4_gruppe_1.Repository.WishListRepository;
 
-import java.util.List;
-
 @Controller
 public class ProductController {
 
@@ -45,8 +43,29 @@ public class ProductController {
         return "redirect:wishlist/"+wishlist_id;
     }
 
+    @GetMapping("/updateProduct/{id}")
+    public String showUpdate(@PathVariable("id") int id, Model model) {
+        Product product = productRepository.getProductById(id);
+        model.addAttribute("product", product);
+        return "updateProductForm";
+    }
+
+    @PostMapping("/updateProduct")
+    public String updateProduct(
+            @RequestParam("id") int id,
+            @RequestParam("productName") String productName,
+            @RequestParam("productLink") String productLink,
+            @RequestParam("productDescription") String productDescription,
+            @RequestParam("price") double price,
+            @RequestParam("quantity") int quantity
+    ) {
+        Product product = new Product(id, productName, productLink, productDescription, price, quantity);
+        productRepository.updateProductEntry(product);
+        return "redirect:wishListSide";
+    }
+
     @GetMapping("/deleteFromProducts/{id}")
-    public String deleteMusicEntry(@PathVariable("id") int id, HttpServletRequest request) {
+    public String deleteProductEntry(@PathVariable("id") int id, HttpServletRequest request) {
         productRepository.deleteFromProducts(id);
         String referrer = request.getHeader("referer");
         if (referrer != null && !referrer.isEmpty()) {

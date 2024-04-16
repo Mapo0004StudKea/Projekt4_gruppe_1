@@ -49,7 +49,7 @@ public class wishListController {
     }
 
     @GetMapping("/wishlist/{id}")
-    public String showTest(
+    public String viewWishlist(
             @PathVariable("id") int ListeId,
             Model model
     ) {
@@ -59,6 +59,6 @@ public class wishListController {
         //2. hent alle produkter med wishlist = listeid, tilføj til model attribute (skal være en collection),
         List<Product> productList = productRepository.getProductListBySpecifiedId(ListeId);
         model.addAttribute("products", productList);
-        return "newProductPage";
+        return "ProductPage";
     }
 }

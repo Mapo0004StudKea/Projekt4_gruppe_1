@@ -24,7 +24,16 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, String productName, String productLink,String productDescription, double price, int quantity, int wishlist_id) {
+    public Product(int id, String productName, String productLink, String productDescription, double price, int quantity) {
+        this.id = id;
+        this.productName = productName;
+        this.productLink = productLink;
+        this.productDescription = productDescription;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public Product(int id, String productName, String productLink, String productDescription, double price, int quantity, int wishlist_id) {
         this.id = id;
         this.productName = productName;
         this.productLink = productLink;

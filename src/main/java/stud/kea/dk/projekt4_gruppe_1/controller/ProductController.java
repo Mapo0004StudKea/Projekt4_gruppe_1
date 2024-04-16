@@ -1,5 +1,6 @@
 package stud.kea.dk.projekt4_gruppe_1.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,14 +21,6 @@ public class ProductController {
     public ProductRepository productRepository;
     @Autowired
     public WishListRepository wishListRepository;
-
-    @GetMapping("/productPage")
-    public String showProductList(Model model) {
-        List<Product> productList = productRepository.getProductsList();
-        model.addAttribute("products", productList);
-        System.out.println(productList);
-        return "productPage";
-    }
 
     @GetMapping("/CreateProducts/{id}")
     public String showCreateNewProducts(
@@ -50,5 +43,16 @@ public class ProductController {
         Product product = new Product(productName, productLink, productDescription, price, quantity, wishlist_id);
         productRepository.createNewProducts(product);
         return "redirect:wishlist/"+wishlist_id;
+    }
+
+    @GetMapping("/deleteFromProducts/{id}")
+    public String deleteMusicEntry(@PathVariable("id") int id, HttpServletRequest request) {
+        productRepository.deleteFromProducts(id);
+        String referrer = request.getHeader("referer");
+        if (referrer != null && !referrer.isEmpty()) {
+            return "redirect:" + referrer;
+        } else {
+            return "redirect:/";
+        }
     }
 }

@@ -31,5 +31,18 @@ public class ProductRepository {
         jdbcTemplate.update(INSERT_PRODUCTS_SQL, product.getProductName(), product.getProductLink(), product.getProductDescription(), product.getPrice(), product.getQuantity(), product.getWishlist_id());
     }
 
+    public void deleteFromProducts(int id) {
+        String DELETE_FROM_Products_SQL = "DELETE FROM products where id = ?";
+        jdbcTemplate.update(DELETE_FROM_Products_SQL, id);
+    }
 
+    public Product getProductById(int id) {
+        String GET_ID_SQL = "SELECT * FROM products WHERE id = ?";
+        return jdbcTemplate.queryForObject(GET_ID_SQL, new Object[]{}, new BeanPropertyRowMapper<>(Product.class));
+    }
+
+    public void updateProductEntry(Product product) {
+        String UPDATE_SQL = "UPDATE products SET productName = ?, productLink = ?, productDescription = ?, price = ?, quantity = ? WHERE id = ?";
+        jdbcTemplate.update(UPDATE_SQL, product.getProductName(), product.getProductLink(), product.getProductDescription(), product.getPrice(), product.getQuantity(), product.getId());
+    }
 }

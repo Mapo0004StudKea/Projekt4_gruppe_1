@@ -1,41 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Create user</title>
     <link rel="stylesheet" href="../static/CSS/create.css" th:href="@{css/create.css}">
+    <link rel = "stylesheet" href="../Static/css/header.css" th:href ="@{css/header.css}">
+    <link rel = "stylesheet" href="../static/css/footer.css" th:href="@{css/footer.css}">
+    <link rel = "stylesheet" href="../static/css/createAccount.css" th:href="@{css/createAccount.css}">
+    <link rel="stylesheet" href="../static/CSS/login.css" th:href="@{css/login.css}">
 </head>
+
 <body>
 
-  <h2> Indtast dine oplysninger her </h2>
+<header class="header">
 
-<div class="wrapper">
-  <form action="/createAccount" method="post">
-      <div>
-          <label>First name </label>
-          <input id="name-field" name="name" type="text">
-      </div>
+    <a href="/" class="image"></a>
+    <a href="/" class="forside"><p1>KoncertKavaranen</p1></a>
 
-      <div>
-          <label> Last name </label>
-          <input id="genre-field" name="lastName" type="text">
-      </div>
+    <nav class="navbar">
+        <a href="/">Koncerter</a>
+        <a href="/">Inspiration</a>
+        <a href="/wishListSide">Ønskeliste</a>
+        <a href="/">Login</a>
+    </nav>
+</header>
 
-      <div>
-          <label> E-mail</label>
-          <input id="album-field" name="email" type="text">
-      </div>
 
-      <div>
-          <label> Date of birth (dd/mm/yyyy)</label>
-          <input id="price-field" name="date" type="text">
-      </div>
+<div class="login">
+    <div class="blockcreateAcc1">
+        <div class="wrapper">
+            <h2> Indtast dine oplysninger her </h2>
+    </div>
+        <form action="/" method="post">
+            <div class="input-box">
+                <label>First name </label>
+                <input id="name-field" name="name" type="text">
+            </div>
 
-      <input type="submit" value="Opret bruger">
-  </form>
+            <div class="input-box">
+                <label> Last name </label>
+                <input id="genre-field" name="lastName" type="text">
+            </div>
+
+            <div class="input-box">
+                <label> E-mail</label>
+                <input id="album-field" name="email" type="text">
+            </div>
+
+            <div class="input-box">
+                <label> Date of birth (dd/mm/yyyy)</label>
+                <input id="price-field" name="date" type="text">
+            </div>
+
+            <button type="submit" class="button">Opret</button>
+
+
+            <a href="/login">Har du en bruger?</a>
+
+        </form>
+    </div>
 </div>
 
-
-
 </body>
+
 </html>

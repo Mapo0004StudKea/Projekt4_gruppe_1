@@ -1,0 +1,13 @@
+.blockcreateAcc{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockcreateAcc1{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}

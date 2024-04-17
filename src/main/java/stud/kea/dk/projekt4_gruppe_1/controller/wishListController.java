@@ -73,4 +73,5 @@ public class wishListController {
             return "redirect:/";
         }
     }
+
 }

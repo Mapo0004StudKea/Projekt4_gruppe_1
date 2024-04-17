@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import stud.kea.dk.projekt4_gruppe_1.model.User;
-import stud.kea.dk.projekt4_gruppe_1.repository.UserRepository;
+import stud.kea.dk.projekt4_gruppe_1.repository.UsersRepository;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -15,7 +15,7 @@ import java.time.format.DateTimeParseException;
 @Controller
 public class FrontPageController {
     @Autowired
-    UserRepository userRepository;
+    UsersRepository userRepository;
 
     @GetMapping("/login")
     public String loginPage() {
@@ -42,7 +42,7 @@ public class FrontPageController {
 
     @PostMapping("loginside")
     public String submitLogin()
-            {
+    {
         return "redirect:/FrontPage";
     }
 
@@ -79,4 +79,3 @@ public class FrontPageController {
     }
 
 }
-

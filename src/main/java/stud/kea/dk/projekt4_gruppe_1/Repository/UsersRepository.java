@@ -9,12 +9,12 @@ import stud.kea.dk.projekt4_gruppe_1.model.User;
 
 import java.util.List;
 @Repository
-public class UserRepository {
+public class UsersRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
     public List<User> getUser(){
-        String DISPLAY_USER_SQL = "SELECT FROM users";
+        String DISPLAY_USER_SQL = "SELECT * FROM users";
         List<User> userList = jdbcTemplate.query(DISPLAY_USER_SQL,new BeanPropertyRowMapper<>(User.class));
         return userList;
     }
@@ -36,5 +36,10 @@ public class UserRepository {
     public void updateProducts(User user) {
         String UPDATE_USER_SQL = "UPDATE users SET firstname WHERE id =?";
         jdbcTemplate.update(UPDATE_USER_SQL, user.getFirstName(), user.getId());
+    }
+
+    public User getUserListById(int id) {
+        String GET_USERLIST_SQL = "SELECT * FROM users WHERE id = ?";
+        return jdbcTemplate.queryForObject(GET_USERLIST_SQL, new Object[]{id}, new BeanPropertyRowMapper<>(User.class));
     }
 }

@@ -11,3 +11,18 @@
     align-content: center;
     flex-direction: column;
 }
+.navbar3 a{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #FFC601;
+    color: #1A1A1A;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar3 a:hover{
+    background-color: wheat;
+
+}

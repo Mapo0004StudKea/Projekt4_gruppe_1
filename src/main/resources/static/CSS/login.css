@@ -80,8 +80,10 @@ body{
     box-shadow: 0 0 10px rgba(0,0,0, .1);
     cursor: pointer;
     font-size: 18px;
-    color: #1A1A1A;
     font-weight: 400;
+}
+.button a {
+    color: #1A1A1A;
 }
 .login .register-link{
     font-size: 16px;
@@ -95,4 +97,19 @@ body{
 }
 .register-link p a:hover{
     text-decoration: underline;
+}
+.navbar4 a{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #FFC601;
+    color: #1A1A1A;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar4 a:hover{
+    background-color: wheat;
+
 }

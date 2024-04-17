@@ -5,9 +5,21 @@
     <title>Title</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../static/CSS/login.css" th:href="@{css/login.css}">
+    <link rel="stylesheet" href="../static/CSS/footer.css" th:href="@{css/footer.css}">
+    <link rel="stylesheet" href="../static/CSS/header.css" th:href="@{css/header.css}">
 </head>
-<body>
 
+<header class="header">
+
+    <a href="/" class="image"></a>
+    <a href="/" class="forside"><p1>KoncertKavaranen</p1></a>
+
+    <nav class="navbar4">
+        <a href="/createAccount">Register</a>
+    </nav>
+</header>
+
+<body>
         <div class="login">
             <form action="">
                 <h1>Login</h1>
@@ -26,13 +38,15 @@
                     <a href="/">Forgot password?</a>
                 </div>
 
-                <button type="submit" class="button">Login</button>
+                <button type="submit" class="button"><a href ="/FrontPage">Login</a></button>
 
                 <div class="register-link">
-                    <p>Opret en profil her! <a href ="/">Register</a></p>
+                    <p>Opret en profil her! <a href ="/createAccount">Register</a></p>
                 </div>
             </form>
         </div>
+
+
 
 </body>
 </html>

@@ -34,17 +34,20 @@ body{
     background-size: cover;
     border-radius: 30px 30px 0 0;
 }
+
 .fest-1{
-    background-image: url('../image/vega.png');
+    background-image: url('../image/star.jpeg');
+    
 }
 .fest-2{
     background-image: url('../image/RoskildeFestival.webp');
 }
 .fest-3{
-    background-image: url('../image/mennesker.jpg');
+    background-image: url('../image/ticketmaster.jpeg');
+    background-size: 300px;
 }
 .fest-4{
-    background-image: url('../image/mennesker.jpg');
+    background-image: url('../image/sydforsolen.png');
 }
 .flex-box a{
     font-size: 16px;

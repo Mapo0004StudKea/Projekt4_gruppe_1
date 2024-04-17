@@ -1,4 +1,4 @@
-package stud.kea.dk.projekt4_gruppe_1.controller;
+package stud.kea.dk.projekt4_gruppe_1.Controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;

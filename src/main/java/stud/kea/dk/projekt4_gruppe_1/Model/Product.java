@@ -1,4 +1,4 @@
-package stud.kea.dk.projekt4_gruppe_1.Model;
+package stud.kea.dk.projekt4_gruppe_1.model;
 
 import java.util.List;
 

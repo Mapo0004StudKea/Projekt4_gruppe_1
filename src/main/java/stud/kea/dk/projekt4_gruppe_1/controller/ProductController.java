@@ -1,4 +1,4 @@
-package stud.kea.dk.projekt4_gruppe_1.Controller;
+package stud.kea.dk.projekt4_gruppe_1.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import stud.kea.dk.projekt4_gruppe_1.Model.Product;
-import stud.kea.dk.projekt4_gruppe_1.Repository.ProductRepository;
-import stud.kea.dk.projekt4_gruppe_1.Repository.WishListRepository;
+import stud.kea.dk.projekt4_gruppe_1.model.Product;
+import stud.kea.dk.projekt4_gruppe_1.repository.ProductRepository;
+import stud.kea.dk.projekt4_gruppe_1.repository.WishListRepository;
 
 @Controller
 public class ProductController {

@@ -1,12 +1,12 @@
-package stud.kea.dk.projekt4_gruppe_1.Controller;
+package stud.kea.dk.projekt4_gruppe_1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import stud.kea.dk.projekt4_gruppe_1.Model.User;
-import stud.kea.dk.projekt4_gruppe_1.Repository.UserRepository;
+import stud.kea.dk.projekt4_gruppe_1.model.User;
+import stud.kea.dk.projekt4_gruppe_1.repository.UserRepository;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -45,8 +45,6 @@ public class FrontPageController {
             {
         return "redirect:/FrontPage";
     }
-
-
 
     @PostMapping("/createAccount")
     public String createUser(

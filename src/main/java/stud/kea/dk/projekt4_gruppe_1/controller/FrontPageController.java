@@ -53,9 +53,10 @@ public class FrontPageController {
             @RequestParam("name") String name,
             @RequestParam("lastName") String lastName,
             @RequestParam("email") String email,
+            @RequestParam("pwd") String pwd,
             @RequestParam("date") String dateOfBirth
     ) {
-        User user = new User(name, lastName, email, dateOfBirth);
+        User user = new User(name, lastName, email, pwd, dateOfBirth);
         userRepository.createUser(user);
         // Check if the date of birth is empty or null
         if (dateOfBirth == null || dateOfBirth.isEmpty()) {

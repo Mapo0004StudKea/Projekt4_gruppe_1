@@ -20,6 +20,7 @@
     line-height: 50px;
     border-radius: 30px;
     margin: 100px;
+    border: 2px solid #FFC601;
 
 }
 .blockWish h3{
@@ -76,17 +77,9 @@ table {
 th, td {
     border: 1px solid #FFC601;
     padding: 10px;
-    text-align: right;
+    text-align: left;
 }
 
-th {
-    background-color: #FFC601; /* Green color */
-    color: black;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
 
 
 

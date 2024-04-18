@@ -8,14 +8,17 @@
     }
     .flex-Box_container {
         display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
     }
     .boxOne {
         width: 20%;
-        height: 500px;
+        height: 250px;
     }
     .boxTwo {
         width: 80%;
-        height: 500px;
+        height: 300px;
     }
     h1 {
         color: black;
@@ -202,12 +205,6 @@
 <h1 th:text="${wishlist.getWishListName()}"></h1>
 <div class="seperator2"></div>
 <div class="flex-Box_container">
-    <div class="boxOne">
-        <div class="seperator2"></div>
-        <a href="/CreateProducts" th:href="@{'/CreateProducts/' + ${wishlist.getId()}}" style="color: #1A1A1A">
-            <button type="submit" class="button">Tilføj et nyt ønske!</button>
-        </a>
-    </div>
     <div class="boxTwo">
     <table>
         <thead>
@@ -237,11 +234,18 @@
             </tr>
         </tbody>
     </table>
+        <div class="seperator2"></div>
+        <a href="/CreateProducts" th:href="@{'/CreateProducts/' + ${wishlist.getId()}}" style="color: #1A1A1A">
+            <button type="submit" class="button">Tilføj et nyt ønske!</button>
+        </a>
     </div>
+    <div class="boxOne">
+        <a href="/wishListSide" th:href="@{/wishListSide}">
+            <button type="submit" class="button">Tilbage til wishlist</button>
+        </a>
+    </div>
+
 </div>
-<a href="/wishListSide" th:href="@{/wishListSide}">
-    <button type="submit" class="button">Tilbage til wishlist</button>
-</a>
 <div class="seperator2"></div>
 <footer class ="footer">
     <div class ="container">

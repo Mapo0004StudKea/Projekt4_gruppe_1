@@ -113,3 +113,9 @@ body{
     background-color: wheat;
 
 }
+
+.blockCointere{
+    justify-items: center;
+    align-items: center;
+
+}

@@ -37,7 +37,7 @@ body{
 
 .fest-1{
     background-image: url('../image/star.jpeg');
-    
+
 }
 .fest-2{
     background-image: url('../image/RoskildeFestival.webp');
@@ -64,7 +64,7 @@ body{
 }
 .overskrift {
     background-color: wheat;
-    height: 20vh;
+    height: 8vh;
     display: flex;
     align-items: flex-end;
 }

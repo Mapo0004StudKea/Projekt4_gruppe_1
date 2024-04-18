@@ -24,7 +24,7 @@ public class FrontPageController {
 
     @GetMapping("/")
     public String frontPageIndex() {
-        return "redirect:FrontPage";
+        return "redirect:login";
     }
 
     @GetMapping("/FrontPage")

@@ -167,6 +167,23 @@
     .footer-col .social-links a:hover{
         background-color: #ffe815;
     }
+    .button {
+        width: 100%;
+        height: 35px;
+        background: #FFC601;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
+        color: #1A1A1A;
+        transition: background 0.3s ease; /* Tilføjer en jævn overgangseffekt */
+    }
+    .button:hover {
+        background: #FFD944; /* Ændrer baggrundsfarven, når musen holdes over knappen */
+    }
 </style>
 </head>
 <body>
@@ -186,10 +203,9 @@
 <div class="seperator2"></div>
 <div class="flex-Box_container">
     <div class="boxOne">
-        <h1>Tilføj Nyt Product: </h1>
         <div class="seperator2"></div>
         <a href="/CreateProducts" th:href="@{'/CreateProducts/' + ${wishlist.getId()}}" style="color: #1A1A1A">
-            <button style="color: #1A1A1A" >Klik her</button>
+            <button type="submit" class="button">Tilføj et nyt ønske!</button>
         </a>
     </div>
     <div class="boxTwo">
@@ -224,7 +240,7 @@
     </div>
 </div>
 <a href="/wishListSide" th:href="@{/wishListSide}">
-    <button style="color: #1A1A1A">Tilbage til wishlist</button>
+    <button type="submit" class="button">Tilbage til wishlist</button>
 </a>
 <div class="seperator2"></div>
 <footer class ="footer">

@@ -11,6 +11,9 @@
     align-content: center;
     flex-direction: column;
 }
+.button{
+    color: #1A1A1A;
+}
 .navbar3 a{
     padding: 10px 20px;
     border-radius: 10px;

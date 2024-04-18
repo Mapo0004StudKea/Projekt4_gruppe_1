@@ -5,7 +5,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import stud.kea.dk.projekt4_gruppe_1.model.Product;
-import stud.kea.dk.projekt4_gruppe_1.model.WishList;
 
 import java.util.List;
 

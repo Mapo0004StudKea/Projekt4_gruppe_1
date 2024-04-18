@@ -6,11 +6,13 @@
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 140vh;
     background-color: wheat;
+}
+.loginbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
 }
 .login{
     width: 420px;

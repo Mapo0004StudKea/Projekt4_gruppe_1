@@ -1,36 +1,75 @@
-
-.blockWish{
-    display: flex;
-    background-color: rgba(26, 26, 26, 0.8);
-    border: 1px solid #1A1A1A;
-    border-radius: 5px;
-    width: 300px;
-    height: 300px;
-    flex-direction: column;
-    margin: 10%;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
-.blockWish span{
-
-}
-
-.blockWish1{
+.blockCointere {
+    height: 75vh;
+    background-color: wheat;
+    background-position: center;
     display: flex;
-    background-color: rgba(26, 26, 26, 0.8);
-    border: 1px solid #1A1A1A;
-    border-radius: 5px;
-    width: 200px;
-    height: 300px;
-    margin: 10%;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-
-.blockCointere{
-    display: flex;
-    background-image: url('../image/stjerneskud.jpg');
-    align-content: space-between;
+    align-items: center;
     justify-content: center;
     text-align: center;
 }
+
+.blockWish{
+    background: #1A1A1A;
+    width: 400px;
+    height: 400px;
+    line-height: 50px;
+    border-radius: 30px;
+    margin: 100px;
+
+}
+.blockWish h3{
+    font-size: 25px;
+    color: #FFC601;
+    font-weight: 300;
+}
+.blockWish a{
+    display: block;
+    margin-left: 130px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+.blockWish a:hover{
+    color: #ffe815;
+}
+
+.blockWish1{
+    background: #1A1A1A;
+    width: 400px;
+    height: 400px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 30px;
+    margin: 10px;
+    text-decoration: none;
+}
+.blockWish1 h3{
+    font-size: 25px;
+    color: #FFC601;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+.blockWish1 h3:hover{
+    color: #ffe815;
+}
+
+.imagewish{
+    background-color: #ffe815;
+    height: 300px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 30px 30px 0 0;
+
+}
+.w1{
+    background-image: url('../image/wishingwell2.jpeg');
+}
+
+
+
+

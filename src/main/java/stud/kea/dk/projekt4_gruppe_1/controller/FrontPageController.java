@@ -29,7 +29,7 @@ public class FrontPageController {
 
     @GetMapping("/FrontPage")
     public String frontPage() {
-        return "Frontpage";
+        return "frontPage";
     }
 
     @GetMapping("/createAccount")

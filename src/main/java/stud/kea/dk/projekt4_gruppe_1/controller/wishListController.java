@@ -61,6 +61,7 @@ public class wishListController {
         List<Product> productList = productRepository.getProductListBySpecifiedId(ListeId);
         model.addAttribute("products", productList);
         return "ProductPage";
+        //A comment here!
     }
 
     @GetMapping("/deleteFromWishlist/{id}")

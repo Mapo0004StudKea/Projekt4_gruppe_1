@@ -4,3 +4,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+.createbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+}
